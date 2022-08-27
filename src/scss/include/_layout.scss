@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Noto+Sans+KR:wght@100;400;700&family=Poppins:wght@300;400;800&family=Roboto:wght@900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "Inter", "Noto Sans KR", sans-serif;
+  height: calc(var(--vh, 1vh) * 100);
+  z-index: 0;
+
+  &.display_none {
+    display: none;
+  }
+}
+
+.hidden {
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: $point;
+}
+
+::selection {
+  color: #fff;
+  background: $point;
+}
+
+.wrap {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    background: #292929;
+    animation: first-animation-before 0.5s forwards 2s;
+    content: '';
+  }
+
+  &::after {
+    background: $point;
+    height: 0%;
+    animation: first-animation-after 0.5s forwards 1.5s, first-animation-before 0.5s forwards 2s;
+  }
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 200px 15px 100px;
+  box-sizing: border-box;
+  opacity: 1;
+  //transition: opacity 1s;
+
+  @media screen and (min-width: 768px) {
+    padding: 300px 15px 200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 300px 0 200px;
+  }
+
+  //&.fade {
+  //  opacity: 1;
+  //  transition: all 1s;
+  //}
+
+  &_title {
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    font-size: 50px;
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    transition: all 1s;
+
+    @media screen and (min-width: 546px) {
+      font-size: 70px;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 150px;
+    }
+
+    &.animate {
+      left: -20px;
+      transition: all 1s;
+
+      @media screen and (min-width: 1200px) {
+        left: -200px;
+      }
+    }
+  } // .section_title
+}
+
+.dimmed {
+  display: none;
+  z-index: 200;
+
+  @at-root .on & {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.top_button {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+  border: 1px solid #292929;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s;
+  color: #292929;
+
+  @media screen and (min-width: 768px) {
+    bottom: 50px;
+    right: 50px;
+  }
+}

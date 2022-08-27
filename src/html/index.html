@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mjae's Portfolio</title>
+
+    <meta name="author" content="minjee kim">
+    <meta name="description" content="견고한 코드를 작성하는 마크업 개발자 김민지의 포트폴리오">
+    <meta name="kewords" content="마크업 개발자, 퍼블리셔, 포트폴리오, 웹퍼블리셔 포트폴리오, 마크업 개발자 포트폴리오, mjae, 김민지">
+    <meta name="generator" content="Web Storm">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mjae's Portfolio">
+    <meta property="og:url" content="http://mjaedot.com">
+    <meta property="og:image" content="./img/sns_bg.jpg">
+    <meta property="og:site_name" content="Mjae's Portfolio">
+    <meta property="og:description" content="견고한 코드를 작성하는 마크업 개발자 김민지의 포트폴리오">
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="http://mjaedot.com">
+    <meta name="twitter:title" content="Mjae's Portfolio">
+    <meta name="twitter:description" content="견고한 코드를 작성하는 마크업 개발자 김민지의 포트폴리오">
+    <meta property="twitter:image" content="./img/sns_bg.jpg">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/icon/fav.ico">
+
+    <!-- 외부 스크립트 및 스타일 -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body id="body">
+    <h1 class="blind">Mjae's Portfolio</h1>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_logo_area">
+                <a href="#visual" class="header_logo_link anchor_link">Mjae</a>
+            </div>
+            <nav class="header_nav_area" id="headerNav">
+                <button type="button" id="navButton" class="header_nav_button">
+                    <span class="blind">메뉴 열기 버튼</span>
+                </button>
+                <div id="dimmed" class="dimmed"></div>
+                @@include('include/_header_nav_list.html', {
+                    headerNavList: [
+                        {link: "visual", num: "01", name: "Main"},
+                        {link: "about", num: "02", name: "About"},
+                        {link: "experience", num: "03", name: "Experience"},
+                        {link: "work", num: "04", name: "Work"}
+                    ]
+                })
+                <button type="button" id="closeButton" class="header_nav_close_button">
+                    <span class="blind">메뉴 닫기 버튼</span>
+                </button>
+            </nav>
+        </header>
+        <main class="main">
+            @@include('include/_main_visual_area.html')
+            @@include('include/_main_intro_area.html')
+            @@include('include/_main_about_area.html')
+            @@include('include/_main_experience_area.html')
+            @@include('include/_main_work_area.html')
+            <button type="button" class="top_button" id="topButton">top</button>
+        </main>
+        <footer class="footer">
+            <div class="footer_inner">
+                @@include('include/_footer_contact_list.html', {
+                    footerContactList: [
+                        {link: "mailto:mjaedot@gmail.com", class: "mail", text: "mjaedot@gmail.com"},
+                        {link: "https://github.com/mjae404", class: "github", text: "깃허브"},
+                        {link: "https://mjae404.github.io", class: "blog", text: "블로그"}
+                    ]
+                })
+                <small class="footer_copyright">© Copyright 2021 - <script>document.write(new Date().getFullYear());</script> Mjae.</small>
+            </div>
+        </footer>
+    </div>
+    <script>
+        if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+            document.getElementById('body').classList.add('display_none');
+            alert('인터넷 익스플로러는 지원하지 않습니다. 크롬, 파이어폭스 등 모던 브라우저를 사용해주세요.');
+        }
+    </script>
+</body>
+</html>

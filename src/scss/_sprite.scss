@@ -1,0 +1,274 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-blog-name: 'icon_blog';
+$icon-blog-x: 0px;
+$icon-blog-y: 65px;
+$icon-blog-offset-x: 0px;
+$icon-blog-offset-y: -65px;
+$icon-blog-width: 35px;
+$icon-blog-height: 35px;
+$icon-blog-total-width: 155px;
+$icon-blog-total-height: 100px;
+$icon-blog-image: '../sprite/sprite.png';
+$icon-blog: (0px, 65px, 0px, -65px, 35px, 35px, 155px, 100px, '../sprite/sprite.png', 'icon_blog', );
+$icon-close-name: 'icon_close';
+$icon-close-x: 65px;
+$icon-close-y: 0px;
+$icon-close-offset-x: -65px;
+$icon-close-offset-y: 0px;
+$icon-close-width: 50px;
+$icon-close-height: 50px;
+$icon-close-total-width: 155px;
+$icon-close-total-height: 100px;
+$icon-close-image: '../sprite/sprite.png';
+$icon-close: (65px, 0px, -65px, 0px, 50px, 50px, 155px, 100px, '../sprite/sprite.png', 'icon_close', );
+$icon-close-black-name: 'icon_close_black';
+$icon-close-black-x: 40px;
+$icon-close-black-y: 65px;
+$icon-close-black-offset-x: -40px;
+$icon-close-black-offset-y: -65px;
+$icon-close-black-width: 35px;
+$icon-close-black-height: 35px;
+$icon-close-black-total-width: 155px;
+$icon-close-black-total-height: 100px;
+$icon-close-black-image: '../sprite/sprite.png';
+$icon-close-black: (40px, 65px, -40px, -65px, 35px, 35px, 155px, 100px, '../sprite/sprite.png', 'icon_close_black', );
+$icon-github-name: 'icon_github';
+$icon-github-x: 80px;
+$icon-github-y: 65px;
+$icon-github-offset-x: -80px;
+$icon-github-offset-y: -65px;
+$icon-github-width: 35px;
+$icon-github-height: 35px;
+$icon-github-total-width: 155px;
+$icon-github-total-height: 100px;
+$icon-github-image: '../sprite/sprite.png';
+$icon-github: (80px, 65px, -80px, -65px, 35px, 35px, 155px, 100px, '../sprite/sprite.png', 'icon_github', );
+$icon-mail-name: 'icon_mail';
+$icon-mail-x: 120px;
+$icon-mail-y: 0px;
+$icon-mail-offset-x: -120px;
+$icon-mail-offset-y: 0px;
+$icon-mail-width: 35px;
+$icon-mail-height: 35px;
+$icon-mail-total-width: 155px;
+$icon-mail-total-height: 100px;
+$icon-mail-image: '../sprite/sprite.png';
+$icon-mail: (120px, 0px, -120px, 0px, 35px, 35px, 155px, 100px, '../sprite/sprite.png', 'icon_mail', );
+$icon-menu-name: 'icon_menu';
+$icon-menu-x: 0px;
+$icon-menu-y: 0px;
+$icon-menu-offset-x: 0px;
+$icon-menu-offset-y: 0px;
+$icon-menu-width: 60px;
+$icon-menu-height: 60px;
+$icon-menu-total-width: 155px;
+$icon-menu-total-height: 100px;
+$icon-menu-image: '../sprite/sprite.png';
+$icon-menu: (0px, 0px, 0px, 0px, 60px, 60px, 155px, 100px, '../sprite/sprite.png', 'icon_menu', );
+$icon-blog-2x-name: 'icon_blog-2x';
+$icon-blog-2x-x: 0px;
+$icon-blog-2x-y: 130px;
+$icon-blog-2x-offset-x: 0px;
+$icon-blog-2x-offset-y: -130px;
+$icon-blog-2x-width: 70px;
+$icon-blog-2x-height: 70px;
+$icon-blog-2x-total-width: 310px;
+$icon-blog-2x-total-height: 200px;
+$icon-blog-2x-image: '../sprite/sprite-2x.png';
+$icon-blog-2x: (0px, 130px, 0px, -130px, 70px, 70px, 310px, 200px, '../sprite/sprite-2x.png', 'icon_blog-2x', );
+$icon-close-2x-name: 'icon_close-2x';
+$icon-close-2x-x: 130px;
+$icon-close-2x-y: 0px;
+$icon-close-2x-offset-x: -130px;
+$icon-close-2x-offset-y: 0px;
+$icon-close-2x-width: 100px;
+$icon-close-2x-height: 100px;
+$icon-close-2x-total-width: 310px;
+$icon-close-2x-total-height: 200px;
+$icon-close-2x-image: '../sprite/sprite-2x.png';
+$icon-close-2x: (130px, 0px, -130px, 0px, 100px, 100px, 310px, 200px, '../sprite/sprite-2x.png', 'icon_close-2x', );
+$icon-close-black-2x-name: 'icon_close_black-2x';
+$icon-close-black-2x-x: 80px;
+$icon-close-black-2x-y: 130px;
+$icon-close-black-2x-offset-x: -80px;
+$icon-close-black-2x-offset-y: -130px;
+$icon-close-black-2x-width: 70px;
+$icon-close-black-2x-height: 70px;
+$icon-close-black-2x-total-width: 310px;
+$icon-close-black-2x-total-height: 200px;
+$icon-close-black-2x-image: '../sprite/sprite-2x.png';
+$icon-close-black-2x: (80px, 130px, -80px, -130px, 70px, 70px, 310px, 200px, '../sprite/sprite-2x.png', 'icon_close_black-2x', );
+$icon-github-2x-name: 'icon_github-2x';
+$icon-github-2x-x: 160px;
+$icon-github-2x-y: 130px;
+$icon-github-2x-offset-x: -160px;
+$icon-github-2x-offset-y: -130px;
+$icon-github-2x-width: 70px;
+$icon-github-2x-height: 70px;
+$icon-github-2x-total-width: 310px;
+$icon-github-2x-total-height: 200px;
+$icon-github-2x-image: '../sprite/sprite-2x.png';
+$icon-github-2x: (160px, 130px, -160px, -130px, 70px, 70px, 310px, 200px, '../sprite/sprite-2x.png', 'icon_github-2x', );
+$icon-mail-2x-name: 'icon_mail-2x';
+$icon-mail-2x-x: 240px;
+$icon-mail-2x-y: 0px;
+$icon-mail-2x-offset-x: -240px;
+$icon-mail-2x-offset-y: 0px;
+$icon-mail-2x-width: 70px;
+$icon-mail-2x-height: 70px;
+$icon-mail-2x-total-width: 310px;
+$icon-mail-2x-total-height: 200px;
+$icon-mail-2x-image: '../sprite/sprite-2x.png';
+$icon-mail-2x: (240px, 0px, -240px, 0px, 70px, 70px, 310px, 200px, '../sprite/sprite-2x.png', 'icon_mail-2x', );
+$icon-menu-2x-name: 'icon_menu-2x';
+$icon-menu-2x-x: 0px;
+$icon-menu-2x-y: 0px;
+$icon-menu-2x-offset-x: 0px;
+$icon-menu-2x-offset-y: 0px;
+$icon-menu-2x-width: 120px;
+$icon-menu-2x-height: 120px;
+$icon-menu-2x-total-width: 310px;
+$icon-menu-2x-total-height: 200px;
+$icon-menu-2x-image: '../sprite/sprite-2x.png';
+$icon-menu-2x: (0px, 0px, 0px, 0px, 120px, 120px, 310px, 200px, '../sprite/sprite-2x.png', 'icon_menu-2x', );
+$spritesheet-width: 155px;
+$spritesheet-height: 100px;
+$spritesheet-image: '../sprite/sprite.png';
+$spritesheet-sprites: ($icon-blog, $icon-close, $icon-close-black, $icon-github, $icon-mail, $icon-menu, );
+$spritesheet: (155px, 100px, '../sprite/sprite.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 310px;
+$retina-spritesheet-height: 200px;
+$retina-spritesheet-image: '../sprite/sprite-2x.png';
+$retina-spritesheet-sprites: ($icon-blog-2x, $icon-close-2x, $icon-close-black-2x, $icon-github-2x, $icon-mail-2x, $icon-menu-2x, );
+$retina-spritesheet: (310px, 200px, '../sprite/sprite-2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$icon-blog-group-name: 'icon_blog';
+$icon-blog-group: ('icon_blog', $icon-blog, $icon-blog-2x, );
+$icon-close-group-name: 'icon_close';
+$icon-close-group: ('icon_close', $icon-close, $icon-close-2x, );
+$icon-close-black-group-name: 'icon_close_black';
+$icon-close-black-group: ('icon_close_black', $icon-close-black, $icon-close-black-2x, );
+$icon-github-group-name: 'icon_github';
+$icon-github-group: ('icon_github', $icon-github, $icon-github-2x, );
+$icon-mail-group-name: 'icon_mail';
+$icon-mail-group: ('icon_mail', $icon-mail, $icon-mail-2x, );
+$icon-menu-group-name: 'icon_menu';
+$icon-menu-group: ('icon_menu', $icon-menu, $icon-menu-2x, );
+$retina-groups: ($icon-blog-group, $icon-close-group, $icon-close-black-group, $icon-github-group, $icon-mail-group, $icon-menu-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

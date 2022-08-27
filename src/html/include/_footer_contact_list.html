@@ -1,0 +1,9 @@
+<ul class="footer_contact_list">
+    @@for (var i = 0; i < footerContactList.length; i++) {
+        <li class="footer_contact_item">
+            <a href="`+footerContactList[i].link+`" target="_blank" class="footer_contact_link `+footerContactList[i].class+`">
+                <span class="blind">`+footerContactList[i].text+`</span>
+            </a>
+        </li>
+    }
+</ul>

@@ -1,0 +1,11 @@
+<dl class="main_detail_list">
+    @@for (var i = 0; i < mainDetailList.length; i++) {
+        <div class="main_detail_item">
+            <dt class="main_detail_title">`+mainDetailList[i].title+`</dt>
+            <dd class="main_detail_content">
+                <span class="main_detail_content_title">`+mainDetailList[i].contentTitle+`</span>
+                <span class="main_detail_content_text">`+mainDetailList[i].contentText+`</span>
+            </dd>
+        </div>
+    }
+</dl>

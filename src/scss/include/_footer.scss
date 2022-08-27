@@ -1,0 +1,48 @@
+.footer {
+  border-top: 1px solid #e8e8e8;
+
+  &_inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    box-sizing: border-box;
+    text-align: center;
+  } // .footer_inner
+
+  &_contact {
+    &_list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    } // .footer_contact_list
+
+    &_item {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    } // .footer_contact_item
+
+    &_link {
+      display: block;
+      color: transparent;
+      overflow: hidden;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &.mail {
+        @include sprite($icon_mail);
+      }
+
+      &.github {
+        @include sprite($icon_github);
+      }
+
+      &.blog {
+        @include sprite($icon_blog);
+      }
+    }
+  }
+}

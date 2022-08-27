@@ -1,0 +1,10 @@
+<ul class="header_nav_list">
+    @@for (var i = 0; i < headerNavList.length; i++) {
+        <li class="header_nav_item">
+            <a href="#`+headerNavList[i].link+`" class="header_nav_link anchor_link">
+                <span class="header_nav_num">`+headerNavList[i].num+`</span>
+                <span class="header_nav_text">`+headerNavList[i].name+`</span>
+            </a>
+        </li>
+    }
+</ul>
