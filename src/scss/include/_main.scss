@@ -475,15 +475,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    visibility: hidden;
-    z-index: -1;
+    display: none;
+    z-index: 500;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
 
     &.on {
-      visibility: visible;
-      z-index: 500;
+      display: block;
     }
 
     &_inner {
