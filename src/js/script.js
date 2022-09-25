@@ -232,10 +232,10 @@ window.onload = () => {
             const imageWrap = document.querySelectorAll('.main_image');
             const workButton = document.querySelectorAll('.main_gallery_link');
 
-            for (let i = 0; i < imageWrap.length; i++) {
+            for (var i = 0; i < imageWrap.length; i++) {
                 imageWrap[i].classList.remove('support_webp');
             }
-            for (let i = 0; i < workButton.length; i++) {
+            for (var i = 0; i < workButton.length; i++) {
                 workButton[i].classList.remove('support_webp');
             }
         }
