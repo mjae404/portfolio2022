@@ -63,10 +63,18 @@
       height: 70%;
       background: url("../img/main_visual.png") no-repeat center center / contain;
 
+      &.support_webp {
+        background: url("../img/main_visual.webp") no-repeat center center / contain;
+      }
+
       @media screen and (min-width: 768px) {
         width: 600px;
         height: 700px;
         background: url("../img/main_visual.png") no-repeat center center / cover;
+
+        &.support_webp {
+          background: url("../img/main_visual.webp") no-repeat center center / contain;
+        }
       }
     } // .main_visual_image
 
@@ -156,7 +164,7 @@
       margin-top: 30px;
 
       &:first-child,
-      &:th-child(2)  {
+      &:nth-child(2)  {
         margin-top: 0;
       }
 
@@ -408,6 +416,38 @@
       background-repeat: no-repeat;
       box-sizing: border-box;
       transition: background-size 0.2s;
+
+      $classNames: (
+          mjaedev2,
+          mjaecomponents,
+          interaction_booklist,
+          coffee,
+          mjaedev,
+          kickmatch,
+          coffit,
+          ozarena,
+          xe,
+          tonyryu,
+          linedance,
+          uniuni,
+          candybirds,
+          ivandesign,
+          actorstars
+      );
+
+      @each $className in $classNames {
+        &.#{$className} {
+          background-image: url('../img/icon_#{$className}.jpg');
+        }
+      }
+
+      &.support_webp {
+        @each $className in $classNames {
+          &.#{$className} {
+            background-image: url('../img/icon_#{$className}.webp');
+          }
+        }
+      }
 
       &::before {
         display: block;
@@ -702,10 +742,18 @@
 
       @at-root .main_about_area & {
         background: url("../img/main_about.png") no-repeat center center / contain;
+
+        &.support_webp {
+          background: url("../img/main_about.webp") no-repeat center center / contain;
+        }
       }
 
       @at-root .main_experience_area & {
         background: url("../img/main_experience.png") no-repeat center center / contain;
+
+        &.support_webp {
+          background: url("../img/main_experience.webp") no-repeat center center / contain;
+        }
       }
 
       &.animate {

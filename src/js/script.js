@@ -91,13 +91,6 @@ const onscroll = function(e) {
         title.classList.toggle('animate', isVisible);
     }
 
-    // let sections = document.querySelectorAll('.section');
-    //
-    // for (let section of sections) {
-    //     const isVisible = checkVisible(section);
-    //     section.classList.toggle('fade', isVisible);
-    // }
-
     scrollFunction();
 };
 
@@ -212,4 +205,39 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+// webp 호환되지 않는 브라우저 반영
+function WebpIsSupported(callback){
+    if(!window.createImageBitmap){
+        callback(false);
+        return;
+    }
 
+    var webpdata = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=';
+
+    // Retrieve the Image in Blob Format
+    fetch(webpdata).then(function(response){
+        return response.blob();
+    }).then(function(blob){
+        createImageBitmap(blob).then(function(){
+            callback(true);
+        }, function(){
+            callback(false);
+        });
+    });
+}
+
+window.onload = () => {
+    WebpIsSupported((isSupportWebP) => {
+        if (!isSupportWebP) {
+            const imageWrap = document.querySelectorAll('.main_image');
+            const workButton = document.querySelectorAll('.main_gallery_link');
+
+            for (let i = 0; i < imageWrap.length; i++) {
+                imageWrap[i].classList.remove('support_webp');
+            }
+            for (let i = 0; i < workButton.length; i++) {
+                workButton[i].classList.remove('support_webp');
+            }
+        }
+    });
+}
