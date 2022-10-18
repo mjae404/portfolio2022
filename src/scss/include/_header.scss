@@ -1,12 +1,10 @@
 .header {
+  @include position (fixed, 0, null, null, 0);
   display: flex;
   align-items: center;
+  width: 100%;
   height: 86px;
   z-index: 100;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   padding: 10px 20px;
@@ -52,12 +50,10 @@
         display: none;
 
         @at-root .on & {
+          @include position (absolute, -10px, 0);
           padding: 20px;
           box-sizing: border-box;
           display: block;
-          position: absolute;
-          top: -10px;
-          right: 0;
           width: 250px;
           min-height: calc(100vh + 10px);
           background-color: #fff;
@@ -75,9 +71,7 @@
 
       @at-root .on & {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 250px;
+        @include position (absolute, 0, 250px);
         @include sprite ($icon_close);
         z-index: 250;
 
@@ -131,15 +125,13 @@
       position: relative;
 
       &::after {
-        position: absolute;
-        left: 0;
-        bottom: -2px;
+        @include position (absolute, null, -2px, null, 0);
         display: block;
         width: 0;
         height: 1px;
         background-color: #000;
         transition: width .4s;
-        content: "";
+        content: '';
       }
     } // .header_nav_text
   }

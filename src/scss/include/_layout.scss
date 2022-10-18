@@ -81,9 +81,7 @@ body {
   }
 
   &_title {
-    position: absolute;
-    top: 100px;
-    left: -100%;
+    @include position (absolute, 100px, null, null, -100%);
     font-size: 50px;
     color: #fff;
     text-shadow:
@@ -118,9 +116,7 @@ body {
 
   @at-root .on & {
     display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include position (fixed, 0, null, null, 0);
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
@@ -128,9 +124,7 @@ body {
 }
 
 .top_button {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
+  @include position (fixed, null, 15px, 15px);
   width: 50px;
   height: 50px;
   z-index: -1;

@@ -73,7 +73,7 @@
         background: url("../img/main_visual.png") no-repeat center center / cover;
 
         &.support_webp {
-          background: url("../img/main_visual.webp") no-repeat center center / contain;
+          background: url("../img/main_visual.webp") no-repeat center center / cover;
         }
       }
     } // .main_visual_image
@@ -97,7 +97,7 @@
         font-size: 70px;
         word-break: break-all;
         line-height: 1.3;
-        font-family: 'Poppins', 'Inter', "Noto Sans KR", sans-serif;
+        font-family: "Poppins", "Inter", "Noto Sans KR", sans-serif;
 
         @media screen and (min-width: 768px) {
           font-size: 100px;
@@ -251,9 +251,7 @@
 
         &::after {
           display: block;
-          position: absolute;
-          top: 50%;
-          right: -7px;
+          @include position (absolute, 50%, -7px);
           width: 1px;
           height: 15px;
           background-color: #515151;
@@ -363,9 +361,7 @@
 
           &::after {
             display: block;
-            position: absolute;
-            right: -7px;
-            top: 50%;
+            @include position (absolute, 50%, -7px);
             width: 2px;
             height: 2px;
             background-color: #7F7F7F;
@@ -451,9 +447,7 @@
 
       &::before {
         display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include position (absolute, 0, null, null, 0);
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
@@ -482,9 +476,7 @@
       &_wrap {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include position (absolute, 0, null, null, 0);
         z-index: 10;
         width: 100%;
         height: 100%;
@@ -512,9 +504,7 @@
 
   // 메인 모달창
   &_modal {
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include position (fixed, 0, null, null, 0);
     display: none;
     z-index: 500;
     width: 100vw;
@@ -526,9 +516,7 @@
     }
 
     &_inner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include position (absolute, 50%, null, null, 50%);
       transform: translate(-50%, -50%);
       border: 1px solid #eee;
       padding: 20px;
@@ -541,7 +529,7 @@
         max-width: 750px;
         width: 100%;
       }
-    }
+    } // .main_modal_inner
 
     &_title {
       font-size: 18px;
@@ -565,9 +553,7 @@
         align-items: flex-start;
 
         &::after {
-          position: absolute;
-          right: -1px;
-          top: 0;
+          @include position (absolute, 0, -1px);
           display: block;
           width: 50px;
           height: 21px;
@@ -578,7 +564,6 @@
             display: none;
           }
         }
-
       } // .main_modal_desc_wrap
     } // .main_modal_desc
 
@@ -599,10 +584,8 @@
         position: relative;
 
         &::after {
+          @include position (absolute, 50%, -7px);
           display: block;
-          position: absolute;
-          right: -7px;
-          top: 50%;
           width: 2px;
           height: 2px;
           background-color: #7f7f7f;
@@ -706,8 +689,8 @@
       } // .main_modal_table_wrap
 
       &_link {
-        color:  $point;
-        border-bottom: 1px dashed  $point;
+        color: $point;
+        border-bottom: 1px dashed $point;
 
         &:hover {
           background-color: $point;
