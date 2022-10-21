@@ -43,6 +43,6 @@
       &.blog {
         @include sprite($icon_blog);
       }
-    }
+    } // .footer_contact_link
   }
 }
